@@ -1,13 +1,28 @@
 const toDoForm = document.querySelector(".js-toDoForm"),
-  toDoInput = form.querySelector("input"),
+  toDoInput = toDoForm.querySelector("input"),
   toDoList = document.querySelector(".js-toDoList");
 
 const TODOS_LS = "toDos";
 
-function loadToDos() {
-  const toDos = localStorage.getItem(TODOS_LS);
+function paintToDo(text) {
+  const li = document.createElement("li");
 }
 
-function init() {}
+function handleSubmit(event) {
+  event.preventDefault();
+  const currentValue = toDoInput.value;
+  paintToDo(currentValue);
+  toDoInput.value = "";
+}
+
+function loadToDos() {
+  const toDos = localStorage.getItem(TODOS_LS);
+  if (todos !== null) {
+  }
+}
+
+function init() {
+  toDoForm.addEventListener("submit", handleSubmit);
+}
 
 init();
